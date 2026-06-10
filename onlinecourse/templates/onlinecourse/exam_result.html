@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kết quả bài thi</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container mt-5 text-center">
+    <div class="card shadow p-5">
+        {% if passed %}
+            <h1 class="text-success">Congratulations!</h1>
+            <p class="lead">Bạn đã vượt qua bài thi khóa học <strong>{{ course.name }}</strong>.</p>
+        {% else %}
+            <h1 class="text-danger">Rất tiếc!</h1>
+            <p class="lead">Bạn chưa đủ điểm qua môn <strong>{{ course.name }}</strong>.</p>
+        {% endif %}
+        <h2 class="mt-4">Điểm số của bạn: <span class="badge badge-primary">{{ score }}</span></h2>
+    </div>
+</body>
+</html>
